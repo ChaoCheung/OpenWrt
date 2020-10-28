@@ -103,6 +103,11 @@ jobs:
       CONFIG_PACKAGE_luci-app-vsftpd=y
       CONFIG_PACKAGE_luci-app-wol=y
       EOF
+      # 编译WNDR4300的主题:
+      cat >> .config <<EOF
+      CONFIG_PACKAGE_luci-theme-bootstrap=y
+      CONFIG_PACKAGE_luci-theme-netgear=y
+      EOF
       - name: Make download
         run: |
           make download -j8
