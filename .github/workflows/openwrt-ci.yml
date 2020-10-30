@@ -12,7 +12,6 @@ name: OpenWrt-CI
 on:
   schedule:
     - cron: 0 20 * * *
-on:
   push:
     branches:
       - master
@@ -64,13 +63,14 @@ jobs:
 
       - name: Generate configuration file
         run: |
-          cp ./makeconfig.d/x86_64.config ./.config
-          make defconfig
-        cat >> .config <<EOF
-        CONFIG_TARGET_ar71xx=y
-        CONFIG_TARGET_ar71xx_generic=y
-        CONFIG_TARGET_BOARD="ar71xx"
-        EOF
+          rm -f ./.config*
+          touch ./.config
+      # WNDR4300固件
+      cat >> .config <<EOF
+      CONFIG_TARGET_ar71xx=y
+      CONFIG_TARGET_ar71xx_generic=y
+      CONFIG_TARGET_BOARD="ar71xx"
+      EOF
          # 编译WNDR4300的固件:
          cat >> .config <<EOF
          CONFIG_PACKAGE_luci-app-accesscontrol=y
