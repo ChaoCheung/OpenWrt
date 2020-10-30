@@ -66,13 +66,13 @@ jobs:
         run: |
           cp ./makeconfig.d/x86_64.config ./.config
           make defconfig
-       # 编译WNDR4300的固件:
+         # 编译WNDR4300的固件:
          cat >> .config <<EOF
          CONFIG_TARGET_ar71xx=y
          CONFIG_TARGET_ar71xx_generic=y
          CONFIG_TARGET_BOARD="ar71xx"
          EOF
-       # 编译WNDR4300的固件:
+         # 编译WNDR4300的固件:
          cat >> .config <<EOF
          CONFIG_PACKAGE_luci-app-accesscontrol=y
          CONFIG_PACKAGE_luci-app-adblock=y
@@ -81,26 +81,26 @@ jobs:
          CONFIG_PACKAGE_luci-app-arpbind=y
          CONFIG_PACKAGE_luci-app-autoreboot=y
          CONFIG_PACKAGE_luci-app-baidupcs-web=y
-      CONFIG_PACKAGE_luci-app-ddns=y
-      CONFIG_PACKAGE_luci-app-filetransfer=y
-      CONFIG_PACKAGE_luci-app-firewall=y
-      CONFIG_PACKAGE_luci-app-haproxy-tcp=y
-      CONFIG_PACKAGE_luci-app-music-remote-center=y
-      CONFIG_PACKAGE_luci-app-mwan3=y
-      CONFIG_PACKAGE_luci-app-mwan3helper=y
-      CONFIG_PACKAGE_luci-app-n2n_v2=y
-      CONFIG_PACKAGE_luci-app-nlbwmon=y
-      CONFIG_PACKAGE_luci-app-ramfree=y
-      CONFIG_PACKAGE_luci-app-sfe=y
-      CONFIG_PACKAGE_luci-app-ssr-plus=y
-      CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
-      CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-      CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-      CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
-      CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-      CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-      CONFIG_PACKAGE_luci-app-unblockmusic=y
-      CONFIG_PACKAGE_luci-app-upnp=y
+         CONFIG_PACKAGE_luci-app-ddns=y
+         CONFIG_PACKAGE_luci-app-filetransfer=y
+         CONFIG_PACKAGE_luci-app-firewall=y
+         CONFIG_PACKAGE_luci-app-haproxy-tcp=y
+         CONFIG_PACKAGE_luci-app-music-remote-center=y
+         CONFIG_PACKAGE_luci-app-mwan3=y
+         CONFIG_PACKAGE_luci-app-mwan3helper=y
+         CONFIG_PACKAGE_luci-app-n2n_v2=y
+         CONFIG_PACKAGE_luci-app-nlbwmon=y
+         CONFIG_PACKAGE_luci-app-ramfree=y
+         CONFIG_PACKAGE_luci-app-sfe=y
+         CONFIG_PACKAGE_luci-app-ssr-plus=y
+         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
+         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
+         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
+         CONFIG_PACKAGE_luci-app-unblockmusic=y
+         CONFIG_PACKAGE_luci-app-upnp=y
       CONFIG_PACKAGE_luci-app-vlmcsd=y
       CONFIG_PACKAGE_luci-app-vsftpd=y
       CONFIG_PACKAGE_luci-app-wol=y
