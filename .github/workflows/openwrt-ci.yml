@@ -66,7 +66,6 @@ jobs:
         run: |
           cp ./makeconfig.d/x86_64.config ./.config
           make defconfig
-         # 编译WNDR4300的固件:
          cat >> .config <<EOF
          CONFIG_TARGET_ar71xx=y
          CONFIG_TARGET_ar71xx_generic=y
