@@ -40,30 +40,30 @@ jobs:
         run: |
           rm -f ./.config*
           touch ./.config
-          # 编译x64固件:
+          # 编译wndr4300固件:
           cat >> .config <<EOF
           CONFIG_TARGET_ar71xx=y
           CONFIG_TARGET_ar71xx_nand=y
           CONFIG_TARGET_ar71xx_nand_DEVICE_WNDR4300V1=y
           EOF
           cat >> .config <<EOF
-          CONFIG_PACKAGE_ca-certificates=y
+          # CONFIG_PACKAGE_ca-certificates=y
           CONFIG_PACKAGE_luci-app-accesscontrol=y
-          CONFIG_PACKAGE_luci-app-adblock=y
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
-          CONFIG_PACKAGE_luci-app-advanced-reboot=y
+          # CONFIG_PACKAGE_luci-app-adblock=y
+          # CONFIG_PACKAGE_luci-app-adbyby-plus=y
+          # CONFIG_PACKAGE_luci-app-advanced-reboot=y
           CONFIG_PACKAGE_luci-app-arpbind=y
-          CONFIG_PACKAGE_luci-app-autoreboot=y
-          CONFIG_PACKAGE_luci-app-baidupcs-web=y
-          CONFIG_PACKAGE_luci-app-ddns=y
+          # CONFIG_PACKAGE_luci-app-autoreboot=y
+          # CONFIG_PACKAGE_luci-app-baidupcs-web=y
+          # CONFIG_PACKAGE_luci-app-ddns=y
           CONFIG_PACKAGE_luci-app-filetransfer=y
           CONFIG_PACKAGE_luci-app-firewall=y
           CONFIG_PACKAGE_luci-app-haproxy-tcp=y
-          CONFIG_PACKAGE_luci-app-music-remote-center=y
-          CONFIG_PACKAGE_luci-app-mwan3=y
-          CONFIG_PACKAGE_luci-app-mwan3helper=y
+          # CONFIG_PACKAGE_luci-app-music-remote-center=y
+          # CONFIG_PACKAGE_luci-app-mwan3=y
+          # CONFIG_PACKAGE_luci-app-mwan3helper=y
           CONFIG_PACKAGE_luci-app-n2n_v2=y
-          CONFIG_PACKAGE_luci-app-nlbwmon=y
+          # CONFIG_PACKAGE_luci-app-nlbwmon=y
           CONFIG_PACKAGE_luci-app-ramfree=y
           CONFIG_PACKAGE_luci-app-sfe=y
           CONFIG_PACKAGE_luci-app-ssr-plus=y
